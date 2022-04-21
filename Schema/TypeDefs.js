@@ -5,12 +5,7 @@ const typeDefs = gql`
         name: String!
         age: Int!
         active: Boolean
-        subject: Subject
-    }
-
-    enum Subject {
-        Maths
-        Science
+        subject: String
     }
 
     # Queries 
@@ -21,7 +16,7 @@ const typeDefs = gql`
 
     # Mutations
     type Mutation{
-        createUser(name: String!, age: Int!, active: Boolean, subject: Subject): User!
+        createUser(name: String!, age: Int!, active: Boolean, subject: String): User!
     }
 `;
 
